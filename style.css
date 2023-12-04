@@ -9,8 +9,24 @@
 }
 
 #input-section {
-    height: 155px;
-    background-color: fuchsia;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#input-box {
+    background-color: #F2F2F2;
+    font-size: 28px;
+    border-width: 1px;
+    width: 350px;
+    padding: 5px
+}
+
+#add-icon {
+    padding-left: 8px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 #column-section {
@@ -27,7 +43,7 @@
     flex-direction: column;
 }
 
-.column-title-box {
+.column-title-wrapper {
     height: 50px;
     border-bottom: solid 2px;
     display: flex;
@@ -78,6 +94,7 @@
     padding: 15px 8px 0 8px;
 }
 
-.icon {
+.icon-task {
     font-size: 18px;
 }
+

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>to do list</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://kit.fontawesome.com/c1d6f06782.js" crossorigin="anonymous"></script>
 </head>
-
 <body id="general-fonts">
 <div id="general-wrapper">
-  <div id="input-section"></div>
+  <div id="input-section">
+    <div id="input-wrapper">
+      <input type="text" id="input-box" placeholder="Task name">
+      <i id="add-icon" class="material-icons">add_circle_outline</i>
+    </div>
+  </div>
   <div id="column-section">
     <div id="to-do-column" class="column">
-      <div class="column-title-box">
+      <div class="column-title-wrapper">
         <div class="column-title">to do</div>
       </div>
       <div class="column-content">
@@ -23,15 +27,27 @@
             <div class="task-name">take out the trash</div>
           </div>
           <div class="task-icon-bar">
-            <i class="icon fas fa-arrow-alt-circle-left"></i>
-            <i class="icon fas fa-trash-alt"></i>
-            <i class="icon fas fa-arrow-alt-circle-right"></i>
+            <i class="icon-task fas fa-arrow-alt-circle-left"></i>
+            <i class="icon-task fas fa-trash-alt"></i>
+            <i class="icon-task fas fa-arrow-alt-circle-right"></i>
           </div>
         </div>
       </div>
     </div>
-    <div id="doing-column" class="column"></div>
-    <div id="done-column" class="column"></div>
+    <div id="doing-column" class="column">
+      <div class="column-title-wrapper">
+        <div class="column-title">doing</div>
+      </div>
+      <div class="column-content">
+      </div>
+    </div>
+    <div id="done-column" class="column">
+      <div class="column-title-wrapper">
+        <div class="column-title">done</div>
+      </div>
+      <div class="column-content">
+      </div>
+    </div>
   </div>
 </div>
 
