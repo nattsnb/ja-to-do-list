@@ -3,10 +3,11 @@ console.log("Script is working")
 let taskInput = document.querySelector("#input-box");
 const addIcon = document.querySelector("#add-icon");
 const toDoColumn = document.querySelector("#to-do-column")
+const doingColumn = document.querySelector("#doing-column")
+const doneColumn = document.querySelector("#done-column")
 
 if (addIcon) {
     addIcon.addEventListener("click", function(){
-        let taskPlace = 1;
         const taskWrapper = document.createElement("div");
         taskWrapper.classList.add("task-wrapper");
         const taskName = document.createElement("div");
@@ -24,16 +25,71 @@ if (addIcon) {
         taskWrapper.append(taskIconBar)
         taskIconBar.append(leftIcon, deleteIcon, rightIcon)
         toDoColumn.append(taskWrapper)
-        addEventListenersToTask(taskWrapper)
+        addEventListenersToToDoSection(taskWrapper)
     })
 }
 
-function addEventListenersToTask(taskBox) {
-    const deleteIcon = taskBox.querySelector(".delete-icon");
-    if (deleteIcon) {
-        deleteIcon.addEventListener("click", function(){
-            taskBox.remove()
+function addEventListenersToToDoSection(taskBox) {
+    const deleteIconFunction = taskBox.querySelector(".delete-icon");
+    if (deleteIconFunction) {
+        deleteIconFunction.addEventListener("click", function(){
+            taskBox.remove();
     })
+    }
+    const doingColumn = document.querySelector("#doing-column")
+    const rightIconFunction = taskBox.querySelector(".right-icon");
+    if (rightIconFunction) {
+        rightIconFunction.addEventListener("click", function(){
+            const clonedTask = taskBox.cloneNode(true);
+            addEventListenersToDoingSection(clonedTask);
+            doingColumn.append(clonedTask);
+            taskBox.remove();
+        })
+    }
+}
+
+function addEventListenersToDoingSection(taskBox) {
+    const deleteIconFunction = taskBox.querySelector(".delete-icon");
+    if (deleteIconFunction) {
+        deleteIconFunction.addEventListener("click", function(){
+            taskBox.remove();
+        })
+    }
+    const leftIconFunction = taskBox.querySelector(".left-icon");
+    if (leftIconFunction) {
+        leftIconFunction.addEventListener("click", function(){
+            const clonedTask = taskBox.cloneNode(true);
+            addEventListenersToToDoSection(clonedTask);
+            toDoColumn.append(clonedTask);
+            taskBox.remove();
+        })
+    }
+    const rightIconFunction = taskBox.querySelector(".right-icon");
+    if (rightIconFunction) {
+        rightIconFunction.addEventListener("click", function(){
+            const clonedTask = taskBox.cloneNode(true);
+            addEventListenersToDoneSection(clonedTask);
+            doneColumn.append(clonedTask);
+            taskBox.remove();
+        })
+    }
+}
+
+function addEventListenersToDoneSection(taskBox) {
+    const deleteIconFunction = taskBox.querySelector(".delete-icon");
+    if (deleteIconFunction) {
+        deleteIconFunction.addEventListener("click", function(){
+            taskBox.remove();
+        })
+    }
+    const leftIconFunction = taskBox.querySelector(".left-icon");
+    if (leftIconFunction) {
+        leftIconFunction.addEventListener("click", function(){
+            const clonedTask = taskBox.cloneNode(true);
+            addEventListenersToDoingSection(clonedTask);
+            doingColumn.append(clonedTask);
+            taskBox.remove();
+        })
     }
 }
 
