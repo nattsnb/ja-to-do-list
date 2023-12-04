@@ -2,11 +2,11 @@ console.log("Script is working")
 
 let taskInput = document.querySelector("#input-box");
 const addIcon = document.querySelector("#add-icon");
-const toDoColumn = document.querySelector(("#to-do-column"))
+const toDoColumn = document.querySelector("#to-do-column")
 
 if (addIcon) {
     addIcon.addEventListener("click", function(){
-        console.log(taskInput.value);
+        let taskPlace = 1;
         const taskWrapper = document.createElement("div");
         taskWrapper.classList.add("task-wrapper");
         const taskName = document.createElement("div");
@@ -24,11 +24,16 @@ if (addIcon) {
         taskWrapper.append(taskIconBar)
         taskIconBar.append(leftIcon, deleteIcon, rightIcon)
         toDoColumn.append(taskWrapper)
-
-
-
-
+        addEventListenersToTask(taskWrapper)
     })
 }
 
+function addEventListenersToTask(taskBox) {
+    const deleteIcon = taskBox.querySelector(".delete-icon");
+    if (deleteIcon) {
+        deleteIcon.addEventListener("click", function(){
+            taskBox.remove()
+    })
+    }
+}
 
