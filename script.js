@@ -1,6 +1,4 @@
-console.log("Script is working")
-
-let taskInput = document.querySelector("#input-box");
+const taskInput = document.querySelector("#input-box");
 const addIcon = document.querySelector("#add-icon");
 const toDoColumn = document.querySelector("#to-do-column")
 const doingColumn = document.querySelector("#doing-column")
@@ -92,4 +90,3 @@ function addEventListenersToDoneSection(taskBox) {
         })
     }
 }
-
