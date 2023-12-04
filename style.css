@@ -67,16 +67,10 @@
 }
 
 .task-wrapper {
-    height: 75px;
+    height: 70px;
     border: 1px solid;
     margin: 8px;
-}
-
-.task-name-box {
-    height: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 5px;
 }
 
 .task-name {
@@ -98,10 +92,10 @@
     font-size: 18px;
 }
 
-#to-do-column .fa-arrow-alt-circle-left {
+#to-do-column .left-icon {
     visibility: hidden;
 }
 
-#done-column .fa-arrow-alt-circle-right {
+#done-column .right-icon {
     visibility: hidden;
 }
