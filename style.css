@@ -3,3 +3,29 @@
     height: 634px;
     background-color: #F2F2F2;
 }
+
+#input-section {
+    height: 155px;
+    background-color: fuchsia;
+}
+
+#column-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px 0 10px;
+}
+
+.column {
+    width: 200px;
+    height: 440px;
+    border: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    height: 60px;
+    border-bottom: solid;
+    border-width: 2px;
+}
