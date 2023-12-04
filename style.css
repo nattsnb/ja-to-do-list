@@ -1,3 +1,7 @@
+#general-fonts {
+    font-family: Arial, sans-serif;
+}
+
 #general-wrapper {
     width: 800px;
     height: 634px;
@@ -18,14 +22,24 @@
 .column {
     width: 200px;
     height: 440px;
-    border: solid;
-    border-width: 2px;
+    border: 2px solid;
     display: flex;
     flex-direction: column;
 }
 
+.column-title-box {
+    height: 50px;
+    border-bottom: solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .column-title {
-    height: 60px;
-    border-bottom: solid;
-    border-width: 2px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.column-title:first-letter {
+    text-transform: uppercase;
 }
