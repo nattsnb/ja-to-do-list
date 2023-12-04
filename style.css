@@ -98,3 +98,10 @@
     font-size: 18px;
 }
 
+#to-do-column .fa-arrow-alt-circle-left {
+    visibility: hidden;
+}
+
+#done-column .fa-arrow-alt-circle-right {
+    visibility: hidden;
+}
