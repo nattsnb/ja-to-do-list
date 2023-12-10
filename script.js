@@ -1,8 +1,8 @@
 const taskInput = document.querySelector("#input-box");
 const addIcon = document.querySelector("#add-icon");
-const toDoColumn = document.querySelector("#to-do-column")
-const doingColumn = document.querySelector("#doing-column")
-const doneColumn = document.querySelector("#done-column")
+const toDoColumn = document.querySelector("#to-do-column");
+const doingColumn = document.querySelector("#doing-column");
+const doneColumn = document.querySelector("#done-column");
 
 if (addIcon) {
     addIcon.addEventListener("click", function(){
@@ -19,11 +19,12 @@ if (addIcon) {
         deleteIcon.classList.add("icon-task", "delete-icon", "fas", "fa-trash-alt");
         const rightIcon = document.createElement("i");
         rightIcon.classList.add("icon-task", "right-icon", "fas", "fa-arrow-alt-circle-right");
-        taskWrapper.append(taskName)
-        taskWrapper.append(taskIconBar)
-        taskIconBar.append(leftIcon, deleteIcon, rightIcon)
-        toDoColumn.append(taskWrapper)
-        addEventListenersToToDoSection(taskWrapper)
+        taskWrapper.append(taskName);
+        taskWrapper.append(taskIconBar);
+        taskIconBar.append(leftIcon, deleteIcon, rightIcon);
+        toDoColumn.append(taskWrapper);
+        addEventListenersToToDoSection(taskWrapper);
+        taskInput.value = "";
     })
 }
 
@@ -32,9 +33,9 @@ function addEventListenersToToDoSection(taskBox) {
     if (deleteIconFunction) {
         deleteIconFunction.addEventListener("click", function(){
             taskBox.remove();
-    })
+        })
     }
-    const doingColumn = document.querySelector("#doing-column")
+    const doingColumn = document.querySelector("#doing-column");
     const rightIconFunction = taskBox.querySelector(".right-icon");
     if (rightIconFunction) {
         rightIconFunction.addEventListener("click", function(){

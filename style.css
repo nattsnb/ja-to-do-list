@@ -1,4 +1,4 @@
-#general-fonts {
+* {
     font-family: Arial, sans-serif;
 }
 
@@ -76,10 +76,6 @@
 .task-name {
     font-size: 22px;
     text-align: center;
-}
-
-.task-name:first-letter {
-    text-transform: uppercase;
 }
 
 .task-icon-bar {
