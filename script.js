@@ -1,3 +1,5 @@
+import {deleteOnClick} from "./deleteFunction.js"
+
 const taskInput = document.querySelector("#input-box");
 const addIcon = document.querySelector("#add-icon");
 const toDoColumn = document.querySelector("#to-do-column");
@@ -31,10 +33,8 @@ if (addIcon) {
 function addEventListenersToToDoSection(taskBox) {
     const deleteIconFunction = taskBox.querySelector(".delete-icon");
     if (deleteIconFunction) {
-        deleteIconFunction.addEventListener("click", function(){
-            taskBox.remove();
-        })
-    }
+        deleteOnClick(deleteIconFunction, taskBox);
+        }
     const doingColumn = document.querySelector("#doing-column");
     const rightIconFunction = taskBox.querySelector(".right-icon");
     if (rightIconFunction) {
@@ -50,9 +50,7 @@ function addEventListenersToToDoSection(taskBox) {
 function addEventListenersToDoingSection(taskBox) {
     const deleteIconFunction = taskBox.querySelector(".delete-icon");
     if (deleteIconFunction) {
-        deleteIconFunction.addEventListener("click", function(){
-            taskBox.remove();
-        })
+        deleteOnClick(deleteIconFunction, taskBox);
     }
     const leftIconFunction = taskBox.querySelector(".left-icon");
     if (leftIconFunction) {
@@ -77,9 +75,7 @@ function addEventListenersToDoingSection(taskBox) {
 function addEventListenersToDoneSection(taskBox) {
     const deleteIconFunction = taskBox.querySelector(".delete-icon");
     if (deleteIconFunction) {
-        deleteIconFunction.addEventListener("click", function(){
-            taskBox.remove();
-        })
+        deleteOnClick(deleteIconFunction, taskBox);
     }
     const leftIconFunction = taskBox.querySelector(".left-icon");
     if (leftIconFunction) {
