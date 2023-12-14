@@ -34,7 +34,7 @@ function addEventListenersToToDoSection(taskBox) {
     const deleteIconFunction = taskBox.querySelector(".delete-icon");
     if (deleteIconFunction) {
         deleteOnClick(deleteIconFunction, taskBox);
-        }
+    }
     const doingColumn = document.querySelector("#doing-column");
     const rightIconFunction = taskBox.querySelector(".right-icon");
     if (rightIconFunction) {
