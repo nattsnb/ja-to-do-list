@@ -1,3 +1,4 @@
+import './styles.css';
 import {deleteOnClick} from "./deleteFunction.js"
 
 const taskInput = document.querySelector("#input-box");
